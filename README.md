@@ -7,6 +7,7 @@ Katkıda bulunmak için Pull Request gönderebilirsiniz! İçerik üretmenin kri
 ## Genel Terimler
 
 1. Context (Tanım Bekleniyor)
+2. [Concurrency(Eszamanlilik)](concurrency/concurrency.md)
 
 ## Object Oriented Programming (Nesneye Dayalı Programlama)
 
