@@ -41,10 +41,18 @@ Ortak hafıza modeli için örnekler :
 - A ve B, ağ bağlantıları ile iletişime geçen, aynı ağdaki iki bilgisayar olabilir.
 - A ve B, bır web tarayıcı ve bir web sunucu olabilir. A, B'ye bir web sayfası için bağlantı isteği gönderir, ve B web sayfası için gerekli datayı A'ya cevap olarak geri gönderir.
 - A ve B anlık mesajlaşma istemcisi ve sunucu olabilir.
-- Ave B, girdi ve çıktıları birbirlerine komut istemcisine yazılan `ls | grep` gibi bir veri yolu (pipe) ile bağlanmış aynı bilgisayarda çalışan iki ayrı program olabilir. 
+- Ave B, girdi ve çıktıları birbirlerine komut istemcisine yazılan `ls | grep` gibi bir veri yolu (pipe) ile bağlanmış bir bilgisayarda aynı anda çalışan iki ayrı program olabilir. 
 
 ### Prosesler(Processes), İş Parçacıkları (Threads), Zaman Dilimleme(Time-slicing)
 
 İleti gönderimi ve ortak hafıza modelleri eşzamanlı modullerin nasıl iletişim kurdukları ile ilgililerdir. Eş zamanlı moduller iki farklı türde karşımıza çıkar: prosesler ve iş parçacıkları.
 
-**Proses :** Proces, aynı makinede, diğer süreçlerden izole edilmiş bir şekilde, çalışan programın bir kopyasıdır. En önemlisi , proses makine hafızasında özel bir bölüme sahiptir.
+**Proses :** Proses, aynı makinede, diğer süreçlerden izole edilmiş bir şekilde çalışan programın bir kopyasıdır. En önemlisi , proses makine hafızasında özel bir bölüme sahiptir.
+
+Proses soyutlaması bir sanal bilgisayardır. Sanal bilgisayar, çalıştırdığın program tüm makineye sahipmiş gibi hissetmeni sağlar. Sadece o programı çalıştırmak için yeni bir hafıza ile yeni bir bilgisayar oluşturmuşun gibi hissettirir.
+
+Tıpkı ağa bağla bilgisayarlarda olduğu gibi, prosesler normalde birbirleri arasında ortak bir hafıza kullanmazlar. Bir proses hiçbir zaman diğer bir prosesin nesnelerine veya hafızasına erişemezler. Prosesler arasında hafıza paylaşım bir çok işletim sisteminde mümkün ancak bu işlem özel bir efor gerektiriyor. Aksine, yeni bir proses otomatik olarak mesaj göndermek için hazırdır çünkü proses standart girdi ve çıktı akışları ile birlikte oluşturulur. `Sysmtem.out` ve `System.in` Java'da kulandığımız girdi ve çıktı akışlarına örnek olarak gösterilebilir.
+
+**İş Parçacığı :** Bir iş parçacığı , çalışan bir programın içindeki denetim yeri olarak tanımlanabilir. 
+
+
