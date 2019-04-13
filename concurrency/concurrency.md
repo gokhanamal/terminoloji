@@ -1,5 +1,5 @@
 
-Transleted from [Reading 17: Concurrency](http://web.mit.edu/6.005/www/fa14/claşses/17-concurrency/)
+Transleted from [Reading 17: Concurrency](http://web.mit.edu/6.005/www/fa14/classes/17-concurrency/)
 
 # Concurrency (Eşzamanlılık)
 
